@@ -20,13 +20,9 @@ console.log(combine([1,2,3], [4,5,6]));
 
 // Exercise 3
 function censor(arr,term){
-	var newArr=[];
-	arr.forEach(function(item){
-		if (item.toLowerCase()!==term.toLowerCase()) {
-			newArr.push(item);
-		}
+	return arr.filter((item)=>{
+		return item !== term;
 	});
-	return newArr;
 }
 
 console.log(censor(['doctor','lawyer','artist','dipshit'], 'dipshit'))
