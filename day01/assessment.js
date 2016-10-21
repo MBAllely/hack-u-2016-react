@@ -21,7 +21,7 @@ console.log(combine([1,2,3], [4,5,6]));
 // Exercise 3
 function censor(arr,term){
 	return arr.filter((item)=>{
-		return item !== term;
+		return item.toLowerCase() !== term.toLowerCase();
 	});
 }
 
