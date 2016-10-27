@@ -1,0 +1,18 @@
+a, a:visited {
+	text-decoration: none;
+	color: green!important;
+}
+
+ul {
+	list-style: none;
+	padding:0 10px 10px 10px;
+}
+
+li {
+	margin-left:0;
+}
+
+.week {
+	margin:20px 10px;
+	border-top: 1px solid gray;
+}
