@@ -1,18 +1,77 @@
+/*globals*/
+body {
+	padding:30px;
+}
 a, a:visited {
 	text-decoration: none;
 	color: green!important;
 }
 
-ul {
-	list-style: none;
-	padding:0 10px 10px 10px;
+.glyphicon {
+	font-size:80%;
 }
 
-li {
-	margin-left:0;
-}
 
 .week {
 	margin:20px 10px;
 	border-top: 1px solid gray;
+}
+
+.week ul {
+	list-style: none;
+	padding:0 10px 10px 10px;
+}
+
+.weekl li {
+	margin-left:0;
+}
+
+.addBtn {
+	margin:0 0px 1px 10px;
+  padding: 2px 10px;
+}
+
+.addForm {
+	border: 1px solid lightgray;
+  padding: 7px;
+  margin-left:25px;
+  opacity: 1;
+  height: auto;
+  visibility: visible; 
+  transition: opacity 0.85s;
+}
+
+.addForm.collapsed {
+  opacity: 0;
+  height:0;
+  visibility: hidden; 
+}
+
+.addForm label {
+	font-size:12px;
+}
+
+#addweek {
+	width:40px;
+}
+
+.completed {
+	text-decoration: line-through;
+	position: relative;
+}
+
+.completed:after {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 2px;
+  background: red;
+  content: "";
+  width: 100%;
+  display: block;
+}
+
+input:focus:valid {
+  border:1px solid lightgreen;
+  -moz-box-shadow: none;
 }

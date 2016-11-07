@@ -1,1 +1,1 @@
-# Course Material app
+# React Journal app
