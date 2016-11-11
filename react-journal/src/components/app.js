@@ -7,13 +7,14 @@ import Header from './header';
 import AddForm from './add_form';
 
 
+
 class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {data};
 	}
 
-	addToList(formData,wkIdx) {		
+	addToList(formData,wkIdx) {	
 		const dataCopy = Object.assign([], this.state.data);
 		dataCopy[wkIdx].links.push(formData);
 		this.setState({data:dataCopy});
@@ -26,13 +27,13 @@ class App extends Component {
 	}
 
 	addNewWeek(){
-		const dataCopy = Object.assign([], this.state.data);
-		const newWeek = {
+		const newWk = {
 			week: this.state.data.length + 1,
 			links: [],
 			completed: false,
-		}
-		dataCopy.push(newWeek);
+		};
+		const dataCopy = Object.assign([], this.state.data);
+		dataCopy.push(newWk);
 		this.setState({data:dataCopy});
 	}
 
@@ -53,13 +54,13 @@ class App extends Component {
 				<Header title="React.js - Course Material" />
 				
 				{weeks}
-				<hr />
 				
+				<hr />
 				<button 
 					className="btn btn-primary"
-					onClick={this.addNewWeek.bind(this)}>
-					Add New Week
+					onClick={this.addNewWeek.bind(this)}>  Add New Week
 				</button>
+
 			</div>
 		)
 	}

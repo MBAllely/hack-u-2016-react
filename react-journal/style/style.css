@@ -2,15 +2,19 @@
 body {
 	padding:30px;
 }
+
 a, a:visited {
 	text-decoration: none;
 	color: green!important;
 }
 
+hr{
+  border-top: 1px solid darkgray
+}
+
 .glyphicon {
 	font-size:80%;
 }
-
 
 .week {
 	margin:20px 10px;

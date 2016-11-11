@@ -26,7 +26,6 @@ class Week extends Component {
 		// CSS styles
 		const completed = this.props.complete ? 'completed' : '';
 		const checkbox = this.props.complete ? 'glyphicon glyphicon-check' : 'glyphicon glyphicon-unchecked'
-		const collapse = this.state.formCollapsed ? 'collapsed' : '';
 		const collapseBtn = !this.state.formCollapsed ? 'glyphicon glyphicon-menu-up' : 'glyphicon glyphicon-plus';
 		
 		return (
@@ -34,8 +33,7 @@ class Week extends Component {
 				<h4 
 					onClick={()=>this.props.onCompleted(this.props.weekIdx)} 
 					className={completed}>
-					<span className={checkbox} aria-hidden="true"></span>
-					 Week {this.props.content.week}
+					<span className={checkbox} aria-hidden="true"></span> Week {this.props.content.week}
 				</h4> 
 
 				<ul>
@@ -45,12 +43,12 @@ class Week extends Component {
 				<button 
 					onClick={this.formToggle.bind(this)} 
 					className="btn addBtn">
-					Add Link <span className={collapseBtn} aria-hidden="true"></span>
+					<span className={collapseBtn} aria-hidden="true"></span>  Add Link
 				</button>
 
 				<AddForm 
 					addToList={this.props.addToList} 
-					collapse={collapse} 
+					formCollapsed={this.state.formCollapsed} 
 					toggleForm={()=>this.setState({formCollapsed:true})} 
 					weekIdx={this.props.weekIdx} />
 			</div>
